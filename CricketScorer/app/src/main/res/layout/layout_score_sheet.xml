@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:padding="9dp">
+
+
+    <include
+        android:id="@+id/currentInnings"
+        layout="@layout/include_score"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="9dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/scoreSheet"
+        layout="@layout/include_table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:padding="9dp"
+        app:layout_constraintStart_toStartOf="@id/currentInnings"
+        app:layout_constraintTop_toBottomOf="@id/currentInnings" />
+
+    <include
+        android:id="@+id/Overs"
+        layout="@layout/include_over"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="@id/currentInnings"
+        app:layout_constraintTop_toBottomOf="@id/scoreSheet" />
+
+    <include
+        android:id="@+id/extras"
+        layout="@layout/include_extras"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:padding="9dp"
+        app:layout_constraintTop_toBottomOf="@id/Overs"
+        app:layout_constraintStart_toStartOf="@id/currentInnings" />
+
+    <View
+        android:id="@+id/boxlayout5"
+        android:layout_width="142dp"
+        android:layout_height="155dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="15dp"
+        android:padding="9dp"
+        android:background="@drawable/background_box"
+        app:layout_constraintTop_toBottomOf="@id/extras"
+        app:layout_constraintStart_toStartOf="@id/extras" />
+
+    <Button
+        android:id="@+id/undobutton"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="@color/green"
+        android:text="@string/undo"
+        app:layout_constraintStart_toStartOf="@id/extras"
+        app:layout_constraintTop_toTopOf="@id/boxlayout5" />
+
+    <Button
+        android:id="@+id/partnershipbutton"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/green"
+        android:text="@string/partnership"
+        app:layout_constraintStart_toStartOf="@id/undobutton"
+        app:layout_constraintTop_toBottomOf="@id/undobutton" />
+
+    <Button
+        android:id="@+id/extrasbutton"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/green"
+        android:text="@string/extras"
+        app:layout_constraintStart_toStartOf="@id/undobutton"
+        app:layout_constraintTop_toBottomOf="@id/partnershipbutton" />
+
+    <include
+        android:id="@+id/runs"
+        layout="@layout/include_runs"
+        android:layout_width="230dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="20dp"
+        android:padding="9dp"
+        app:layout_constraintBottom_toBottomOf="@id/boxlayout5"
+        app:layout_constraintEnd_toEndOf="@id/extras"
+        app:layout_constraintStart_toEndOf="@id/boxlayout5"
+        app:layout_constraintTop_toTopOf="@id/boxlayout5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

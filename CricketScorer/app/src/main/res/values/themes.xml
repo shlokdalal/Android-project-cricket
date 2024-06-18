@@ -1,0 +1,8 @@
+<resources>
+    <style name="Base.Theme.CricketScorer" parent="Theme.Material3.DayNight.NoActionBar">
+    <item name="android:windowLightStatusBar">true</item>
+        <item name="android:fitsSystemWindows">true</item>
+    </style>
+
+    <style name="Theme.CricketScorer" parent="Base.Theme.CricketScorer" />
+</resources>

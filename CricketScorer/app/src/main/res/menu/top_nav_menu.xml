@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/navigation_menu">
+    <item
+        android:id="@+id/navigation_notification"
+        android:icon="@drawable/cricket"
+        android:title="@string/notification" />
+    <item
+        android:id="@+id/navigation_settings"
+        android:icon="@drawable/group"
+        android:title="@string/settings" />
+</menu>

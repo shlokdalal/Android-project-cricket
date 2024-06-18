@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background_box">
+
+    <CheckBox
+        android:id="@+id/wide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/wide"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/no_ball"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/no_ball"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@id/wide"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/byes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/byes"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@id/no_ball"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/leg_byes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="28dp"
+        android:text="@string/leg_byes"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/wicket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/wicket"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@id/wide"
+        app:layout_constraintStart_toStartOf="@id/wide" />
+
+    <Button
+        android:id="@+id/retire_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:backgroundTint="@color/green"
+        android:text="@string/retire"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@id/wicket"
+        app:layout_constraintTop_toBottomOf="@id/no_ball" />
+
+    <Button
+        android:id="@+id/swap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:backgroundTint="@color/green"
+        android:padding="5dp"
+        android:text="@string/swap_batsman"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@id/leg_byes"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@id/retire_button"
+        app:layout_constraintTop_toBottomOf="@id/byes" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
